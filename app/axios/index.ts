@@ -1,7 +1,9 @@
 import axios from "axios"; // Ensure this import is present
+import { API_PATHS } from "../../constants"; // Adjust the import path as necessary
+
 
 export const fetchAPI = async (path) => {
-  const url = `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/${path}`;
+  const url = `${API_PATHS.BASE_URL}/${path}`;
 
   console.log("Fetching API URL:", url); // Debugging: Log the full URL
 
