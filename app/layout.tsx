@@ -34,10 +34,10 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased hero-bg`}>
         <Header headerData={header} />
         {children}
-        <Footer footerData={footer} />
+        {/* <Footer footerData={footer} /> */}
       </body>
     </html>
   );
