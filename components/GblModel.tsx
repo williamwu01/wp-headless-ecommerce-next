@@ -1,8 +1,9 @@
 'use client';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import { useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import { Group } from 'three';
+import Loading from '../app/loading';
 
 function EnchantedCrystal() {
   const { scene } = useGLTF('/models/enchanted_crystal.glb'); // Make sure the file is inside /public
@@ -24,11 +25,15 @@ function EnchantedCrystal() {
 
 export default function CrystalScene() {
   return (
+		<Suspense fallback={<Loading />}>
     <Canvas className="w-full h-full">
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} />
+
       <EnchantedCrystal />
+
       <OrbitControls enableZoom={false}/>
     </Canvas>
+		</Suspense>
   );
 }

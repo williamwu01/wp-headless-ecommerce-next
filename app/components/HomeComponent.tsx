@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchAPI } from '../axios';
 import { API_PATHS } from '../../constants';
 import CrystalScene from '../../components/GblModel';
+import Loading from '../loading';
 
 export default function HomeComponent() {
   interface HomeData {
@@ -60,11 +61,11 @@ export default function HomeComponent() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    <Loading />;
   }
 
   return (
-    <section className="flex flex-col sm:flex-row items-center justify-between sm:gap-8 p-4">
+    <section className="flex flex-col md:flex-row items-center justify-between sm:gap-2 p-4">
       <div className="text-left p-8 flex-1 w-auto sm:w-[500px]">
         {homeData ? (
           <div className="flex flex-col gap-4">
