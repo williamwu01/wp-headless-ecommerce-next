@@ -1,5 +1,6 @@
 import React from "react";
 import HomeComponent from "./components/HomeComponent";
+
 import ProductCollection from "./components/ProductCollection";
 
 export default function Home() {
@@ -10,5 +11,6 @@ export default function Home() {
         <ProductCollection />
       </main>
     </div>
+
   );
 }

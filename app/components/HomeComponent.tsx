@@ -65,6 +65,7 @@ export default function HomeComponent() {
   return (
     <section className="p-4 grid gap-8 md:grid-cols-2">
       <div className="text-left p-8 flex-1 lg:max-w-[500px]">
+
         {homeData ? (
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl">{homeData.h2}</h2>
