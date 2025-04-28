@@ -10,7 +10,7 @@ export default function Header({ headerData }) {
   };
 
   return (
-    <header className="max-w-[900px] w-full bg-black text-white mx-auto mt-4 rounded-full shadow-md">
+    <header className="max-w-[900px] w-full bg-black text-white mx-auto mt-4 rounded-full shadow-md fixed top-0 left-0 right-0">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo + Site Title + Hamburger */}

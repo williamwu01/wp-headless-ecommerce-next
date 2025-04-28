@@ -65,8 +65,8 @@ export default function HomeComponent() {
   }
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between sm:gap-2 p-4">
-      <div className="text-left p-8 flex-1 w-auto sm:w-[500px]">
+    <section className="h-screen flex flex-col md:flex-row items-center justify-between sm:gap-2 p-4">
+      <div className="text-left pt-16 p-8 flex-1 w-auto h-[500px] sm:w-[500px] content-evenly">
         {homeData ? (
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl">{homeData.h2}</h2>
