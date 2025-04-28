@@ -22,7 +22,6 @@ export default function HomeComponent() {
     const fetchData = async () => {
       try {
         const data = await fetchAPI(API_PATHS.HERO); // Fetch from the homepage API path
-        console.log('API Response Data:', data); // Log the API response
 
         // Parse the content if available
         if (data && data.content && data.content.rendered) {
@@ -32,7 +31,6 @@ export default function HomeComponent() {
         }
         setLoading(false); // Stop loading once data is fetched
       } catch (error) {
-        console.error('Error fetching data:', error);
         setLoading(false);
       }
     };
@@ -65,8 +63,9 @@ export default function HomeComponent() {
   }
 
   return (
-    <section className="h-screen flex flex-col md:flex-row items-center justify-between sm:gap-2 p-4">
-      <div className="text-left pt-16 p-8 flex-1 w-auto h-[500px] sm:w-[500px] content-evenly">
+    <section className="p-4 grid gap-8 md:grid-cols-2">
+      <div className="text-left p-8 flex-1 lg:max-w-[500px]">
+
         {homeData ? (
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl">{homeData.h2}</h2>
@@ -84,7 +83,7 @@ export default function HomeComponent() {
       </div>
 
       {/* Crystal scene */}
-      <div className="w-full sm:w-1/2 h-[300px] sm:h-[500px]">
+      <div className="w-full h-[300px] sm:h-[500px]">
         <CrystalScene />
       </div>
     </section>

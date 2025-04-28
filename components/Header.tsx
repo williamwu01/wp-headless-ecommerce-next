@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import Link from "next/link";
+import React, { useState } from "react";
 
 export default function Header({ headerData }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Header({ headerData }) {
         <div className="flex items-center justify-between h-16">
           {/* Logo + Site Title + Hamburger */}
           <div className="flex items-center justify-between w-full sm:w-auto">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               {headerData?.siteLogoUrl ? (
                 <img
                   className="h-8 w-8"
@@ -24,7 +25,7 @@ export default function Header({ headerData }) {
                 />
               ) : (
                 <div className="text-white font-bold text-lg">
-                  {headerData?.siteTitle || 'Default Title'}
+                  {headerData?.siteTitle || "Default Title"}
                 </div>
               )}
               {headerData?.siteTitle ? (
@@ -32,7 +33,7 @@ export default function Header({ headerData }) {
                   {headerData.siteTitle}
                 </div>
               ) : null}
-            </a>
+            </Link>
 
             {/* Hamburger (only on small screens) */}
             <div className="sm:hidden ml-auto">
@@ -40,9 +41,9 @@ export default function Header({ headerData }) {
                 onClick={toggleMenu}
                 type="button"
                 className={`inline-flex items-center justify-center p-2 rounded-md text-gray-400 $
-								${isMenuOpen ? 'text-gray-500' : 'text-white'}`}
+								${isMenuOpen ? "text-gray-500" : "text-white"}`}
                 aria-controls="mobile-menu"
-                aria-expanded={isMenuOpen ? 'true' : 'false'}
+                aria-expanded={isMenuOpen ? "true" : "false"}
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
@@ -85,7 +86,7 @@ export default function Header({ headerData }) {
 
       {/* Mobile Menu */}
       <div
-        className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+        className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

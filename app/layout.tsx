@@ -26,7 +26,6 @@ export default async function RootLayout({ children }) {
     const data = await navfetchAPI(API_PATHS.HEADER_FOOTER);
     header = data?.header || {};
     footer = data?.footer || {};
-    console.log("Header/Footer data:", { header, footer });
   } catch (error) {
     console.error("Failed to fetch header/footer data:", error.message);
   }
