@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchAPI } from '../axios';
 import { API_PATHS } from '../../constants';
 import CrystalScene from '../../components/GblModel';
+import ScrollingText from '../../components/ScrollingText';
 import Loading from '../loading';
 
 export default function HomeComponent() {
@@ -63,7 +64,8 @@ export default function HomeComponent() {
   }
 
   return (
-    <section className="p-4 grid gap-8 md:grid-cols-2">
+		<>
+    <section className="m-auto p-4 grid gap-8 md:grid-cols-2 min-h-screen items-center">
       <div className="text-left p-8 flex-1 lg:max-w-[500px]">
 
         {homeData ? (
@@ -86,6 +88,12 @@ export default function HomeComponent() {
       <div className="w-full h-[300px] sm:h-[500px]">
         <CrystalScene />
       </div>
+
+			{/* promo scrolling text */}
     </section>
+			<div>
+				<ScrollingText/>
+			</div>
+		</>	
   );
 }
