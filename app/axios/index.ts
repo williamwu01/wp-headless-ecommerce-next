@@ -41,7 +41,6 @@ export const fetchAPI = async (path: string) => {
 export const fetchProtectedAPI = async (path: string) => {
   const url = `${API_PATHS.BASE_URL}/${path}?consumer_key=${process.env.CONSUMER_KEY}&consumer_secret=${process.env.CONSUMER_SECRET}`;
 
-  console.log(url)
   try {
     const res = await axios.get(url);
 
