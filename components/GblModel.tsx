@@ -6,7 +6,7 @@ import { Group } from 'three';
 import Loading from '../app/loading';
 
 function EnchantedCrystal() {
-  const { scene } = useGLTF('/models/enchanted_crystal.glb'); // Make sure the file is inside /public
+  const { scene } = useGLTF('/models/Amethyst.glb'); // Make sure the file is inside /public
   const groupRef = useRef<Group>(null);
 
   // Rotate the group every frame
@@ -18,7 +18,7 @@ function EnchantedCrystal() {
 
   return (
     <group ref={groupRef}>
-      <primitive object={scene} scale={50} />
+      <primitive object={scene} scale={3} />
     </group>
   );
 }

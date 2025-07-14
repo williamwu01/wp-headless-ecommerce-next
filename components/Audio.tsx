@@ -28,7 +28,7 @@ export default function AudioPlayer() {
   }, []);
 
   return (
-    <div className="absolute top-4 right-4 z-50">
+    <div className="absolute bottom-4 right-4 z-50">
       {/* Audio element, initially muted */}
       <audio ref={audioRef} loop muted={isMuted}>
         <source src="/audio/audio.mp3" type="audio/mp3" />
